@@ -52,7 +52,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  assets:
+    - assets/images/surveyCompleteImg.png
   uses-material-design: true
   fonts:
      - family: text

@@ -2,6 +2,10 @@
 import 'package:flutter/material.dart';
 import 'surveyList_page.dart';
 
+//widgets
+import '../widget/widgets4AllPage/buttons/longRoundedButton.dart';
+import "../widget/loginPageWidgets/loginTextField.dart";
+
 class LoginPage extends StatefulWidget{
   @override
   LoginPageState createState() => LoginPageState();
@@ -10,18 +14,30 @@ class LoginPage extends StatefulWidget{
 class LoginPageState extends State<LoginPage>{
   String userId ='';
   String pw ='';
-  
+
+  Icon idIcon = Icon(Icons.person_outlined,color: Color(0xFF6A76FF));
+  Icon pwIcon = Icon(Icons.lock_outline_rounded,color: Color(0xFF6A76FF));
+
+  void idInputChange(String value){
+    setState(() {
+      userId = value;
+    });
+  }
+  void pwInputChange(String value){
+    setState(() {
+      pw = value;
+    });
+  }
   void login(){
     print('Id: $userId');
     print('Password: $pw');
     Navigator.pushReplacement(context,
         MaterialPageRoute(builder: (context) => SurveyListPage()));
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            body: Container(
+        body: Container(
         padding: EdgeInsets.fromLTRB(31, 140, 31,16),
 
         decoration: BoxDecoration(
@@ -46,80 +62,11 @@ class LoginPageState extends State<LoginPage>{
               ),
             ),
             SizedBox(height: 25.0),
-            Container(
-              height: 50,
-              width: 327,
-              child:TextField(
-                decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.person_outlined,color: Color(0xFF6A76FF)),
-                  labelText: 'Id',
-                  labelStyle: TextStyle(
-                    color: Color(0XFF6E78FF), // 원하는 컬러로 설정하세요
-                  ),
-                  filled: true,
-                  fillColor: Colors.white.withOpacity(0.4),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(22.0),
-                    borderSide: BorderSide.none,
-                  ),
-                  focusedBorder:
-                  OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                  ),
-                ),
-                  onChanged: (value) {
-                    setState(() {
-                      userId = value;
-                    });
-                  },
-              ),
-            ),
+            LoginTextFiled(label_text:"id",prefix_icon:idIcon,obscureText_value:false,onChangeFunc: idInputChange,),
             SizedBox(height: 8.0),
-            Container(
-              height: 50,
-              width: 327,
-              child:TextField(
-                  onChanged: (value) {
-                    setState(() {
-                      pw = value;
-                    });
-                  },
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.lock_outline_rounded,color: Color(0xFF6A76FF),),
-                    labelText: 'password',
-                    labelStyle: TextStyle(
-                      color: Color(0XFF6E78FF), // 원하는 컬러로 설정하세요
-                    ),
-                    filled: true,
-                    fillColor: Colors.white.withOpacity(0.4),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(22.0),
-                      borderSide: BorderSide.none,
-                    ),
-                    focusedBorder:
-                    OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                    ),
-                  ),
-              ),
-            ),
+            LoginTextFiled(label_text:"password",prefix_icon:pwIcon,obscureText_value:true,onChangeFunc:pwInputChange,),
             SizedBox(height: 16.0),
-            ElevatedButton (
-              onPressed: login,
-              style: ButtonStyle(
-                minimumSize: MaterialStateProperty.all<Size>(
-                  Size(327.0, 50.0), // 버튼의 최소 크기를 150x50으로 설정
-                ),
-                backgroundColor: MaterialStateProperty.all<Color>(
-                  Color(0xFF4E44EC)
-                ),
-              ),
-              child: Text('Login',style: TextStyle(
-                color: Colors.white, // 텍스트의 색상을 빨간색으로 설정
-                fontSize: 16,
-              ),),
-            ),
+            LongRoundedButton(btn_title: "Login", onPressedFunc: login,text_color: 0xFF4E44EC,),
             SizedBox(height: 14.0),
             Text(
               '회원가입',

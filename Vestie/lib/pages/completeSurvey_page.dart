@@ -39,12 +39,14 @@ class CompleteSurveyParticipatePage extends StatelessWidget {
                         child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.pushReplacement(context,
-                                  MaterialPageRoute(builder: (context) => SurveyListPage()));
-                            },
-                            child: Icon(Icons.close, color: Colors.white,),
+                            InkWell(
+                              onHover: (value) => {
+                              },
+                              onTap: () {
+                                Navigator.pushReplacement(context,
+                                    MaterialPageRoute(builder: (context) => SurveyListPage()));
+                              },
+                              child:Icon(Icons.close, color: Colors.white,),
                           ),
                           GestureDetector(
                             child: Icon(Icons.file_upload_outlined, color: Colors.white),

@@ -1,10 +1,13 @@
 
 import 'package:flutter/material.dart';
-import 'surveyList_page.dart';
+
 
 //widgets
 import '../widget/widgets4AllPage/buttons/longRoundedButton.dart';
 import "../widget/loginPageWidgets/loginTextField.dart";
+
+//page
+import './appFirstPage.dart';
 
 class LoginPage extends StatefulWidget{
   @override
@@ -32,7 +35,7 @@ class LoginPageState extends State<LoginPage>{
     print('Id: $userId');
     print('Password: $pw');
     Navigator.pushReplacement(context,
-        MaterialPageRoute(builder: (context) => SurveyListPage()));
+        MaterialPageRoute(builder: (context) => AppfirstPages()));
   }
   @override
   Widget build(BuildContext context) {

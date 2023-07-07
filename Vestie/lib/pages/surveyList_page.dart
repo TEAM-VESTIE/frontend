@@ -7,6 +7,8 @@ import '../widget/surveyListWidgets/surveyListItem_widget.dart';
 import "../widget/pageTitleWidgets/pageTitleWidget.dart";
 import "../widget/surveyListWidgets/surveyList_widget.dart";
 import '../widget/widgets4AllPage/buttons/midRoundedButton.dart';
+import "../widget/widgets4AllPage/underbar/bottomBarWidget.dart";
+
 import "../pages/login_page.dart";
 
 class SurveyListPage extends StatefulWidget {
@@ -42,8 +44,8 @@ class SurveyListPage extends StatefulWidget {
               MidRoundedButton(btn_title: "완료", onPressedFunc: move2Login)
             ],
 
-          ),)
-
+          ),
+          ),
         ]
         )
       ),

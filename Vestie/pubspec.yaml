@@ -54,6 +54,8 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/surveyCompleteImg.png
+    - assets/images/logo_white.png
+
   uses-material-design: true
   fonts:
      - family: text

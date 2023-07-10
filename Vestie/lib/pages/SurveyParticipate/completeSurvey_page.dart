@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 //widgets
-import "../widget/pageTitleWidgets/pageTitleWidget.dart";
-import "../widget/widgets4AllPage/buttons/longRoundedButton.dart";
+import '../../widget/pageTitleWidgets/pageTitleWidget.dart';
+import '../../widget/widgets4AllPage/buttons/longRoundedButton.dart';
 
 //pages
-import "../pages/surveyList_page.dart";
+import 'surveyList_page.dart';
 
 
 class CompleteSurveyParticipatePage extends StatelessWidget {

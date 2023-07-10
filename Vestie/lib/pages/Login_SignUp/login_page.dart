@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 
 //widgets
-import '../widget/widgets4AllPage/buttons/longRoundedButton.dart';
-import "../widget/loginPageWidgets/loginTextField.dart";
+import '../../widget/widgets4AllPage/buttons/longRoundedButton.dart';
+import '../../widget/loginPageWidgets/loginTextField.dart';
 
 //page
-import './appFirstPage.dart';
+import '../appFirstPage.dart';
 
 class LoginPage extends StatefulWidget{
   @override

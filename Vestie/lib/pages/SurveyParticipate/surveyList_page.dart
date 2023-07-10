@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'login_page.dart';
+import '../Login_SignUp/login_page.dart';
 
 //widgets
-import '../widget/surveyListWidgets/surveyListItem_widget.dart';
-import "../widget/pageTitleWidgets/pageTitleWidget.dart";
-import "../widget/surveyListWidgets/surveyList_widget.dart";
-import '../widget/widgets4AllPage/buttons/midRoundedButton.dart';
-import "../widget/widgets4AllPage/underbar/bottomBarWidget.dart";
+import '../../widget/surveyListWidgets/surveyListItem_widget.dart';
+import '../../widget/pageTitleWidgets/pageTitleWidget.dart';
+import '../../widget/surveyListWidgets/surveyList_widget.dart';
+import '../../widget/widgets4AllPage/buttons/midRoundedButton.dart';
+import '../../widget/widgets4AllPage/underbar/bottomBarWidget.dart';
 
-import "../pages/login_page.dart";
+import '../Login_SignUp/login_page.dart';
 
 class SurveyListPage extends StatefulWidget {
   const SurveyListPage({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // import 'pages/surveyList_page.dart';
-import 'pages/login_page.dart';
+import 'pages/Login_SignUp/login_page.dart';
 
 
 void main() {

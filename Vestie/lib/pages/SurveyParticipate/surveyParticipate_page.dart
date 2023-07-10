@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 //widgets
-import "../widget/pageTitleWidgets/pageTitleWidget.dart";
-import "../widget/surveyParticipationWidgets/shortFormSurvey.dart";
-import "../widget/widgets4AllPage/buttons/midRoundedButton.dart";
+import '../../widget/pageTitleWidgets/pageTitleWidget.dart';
+import '../../widget/surveyParticipationWidgets/shortFormSurvey.dart';
+import '../../widget/widgets4AllPage/buttons/midRoundedButton.dart';
 
 //pages
-import "../pages/completeSurvey_page.dart";
-import "../pages/surveyList_page.dart";
+import 'completeSurvey_page.dart';
+import 'surveyList_page.dart';
 
 class SurveyParticipatePage extends StatelessWidget {
   @override

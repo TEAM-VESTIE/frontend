@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'surveyListItemTitle_widget.dart';
 
 //pages
-import '../../pages/surveyParticipate_page.dart';
+import '../../pages/SurveyParticipate/surveyParticipate_page.dart';
 
 class SurveyListItem extends StatelessWidget {
   final String title;

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vestie/services/settingValues.dart';
 
 //widgets
 import '../../widget/pageTitleWidgets/pageTitleWidget.dart';
@@ -70,7 +71,7 @@ class CompleteSurveyParticipatePage extends StatelessWidget {
                   ),
                   ),
                 SizedBox(height: 350,),
-                LongRoundedButton(btn_title: "홈 화면으로 돌아가기", onPressedFunc: move2SurveyListPage, text_color: 0xFF6875FF,),
+                LongRoundedButton(btn_title: "홈 화면으로 돌아가기", onPressedFunc: move2SurveyListPage, text_color: TextBright,bnt_color: Primary),
                 SizedBox(height: 10,),
 
               ],

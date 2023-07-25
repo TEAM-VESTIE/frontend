@@ -71,7 +71,8 @@ class CompleteSurveyParticipatePage extends StatelessWidget {
                   ),
                   ),
                 SizedBox(height: 350,),
-                LongRoundedButton(btn_title: "홈 화면으로 돌아가기", onPressedFunc: move2SurveyListPage, text_color: TextBright,bnt_color: Primary),
+                // LongRoundedButton(btn_title: "홈 화면으로 돌아가기", onPressedFunc: move2SurveyListPage, text_color: TextBright,bnt_color: Primary),
+                LongRoundedButton(btn_title: "홈 화면으로 돌아가기", onPressedFunc: move2SurveyListPage, text_color: TextBright),
                 SizedBox(height: 10,),
 
               ],

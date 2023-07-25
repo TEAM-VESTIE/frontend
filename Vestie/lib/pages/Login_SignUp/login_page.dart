@@ -1,7 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:vestie/pages/Login_SignUp/signUp_page.dart';
+
 import 'package:vestie/services/settingValues.dart';
+
 
 
 //widgets
@@ -77,16 +79,19 @@ class LoginPageState extends State<LoginPage>{
             SizedBox(height: 8.0),
             LoginTextFiled(label_text:"password",prefix_icon:pwIcon,obscureText_value:true,onChangeFunc:pwInputChange,),
             SizedBox(height: 16.0),
-            LongRoundedButton(btn_title: "Login", onPressedFunc: login,text_color: TextBright,bnt_color: LoginBtn),
+            // LongRoundedButton(btn_title: "Login", onPressedFunc: login,text_color: TextBright,bnt_color: LoginBtn),
+            LongRoundedButton(btn_title: "Login", onPressedFunc: login,text_color: TextBright),
             SizedBox(height: 14.0),
             TextButton(onPressed: move2SignUp,
-                child: Text(
-                  '회원가입',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 11,
-                  ),
-                ),)
+              child: Text(
+                '회원가입',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 11,
+                ),
+              ),
+            )
+
           ],
         ),
       ),

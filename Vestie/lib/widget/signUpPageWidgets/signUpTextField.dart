@@ -40,50 +40,52 @@ class SignUpTextFiledState extends State<SignUpTextFiled> {
   Widget build(BuildContext context) {
     return Container(
 
-      child:Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-        Text(label_text,  style: TextStyle(
-            color: Color(Primary),
-            fontSize: 12,
-            fontWeight: FontWeight.bold
-        )),
-        Container(
-          height: 40,
-          margin: EdgeInsets.fromLTRB(0, 7, 0, 7),
-          child: TextField(
-            style: TextStyle(color: Color(Primary),
-                fontSize: 12),
-            onChanged: (value){
-              setState(() {
-                _textFieldValue = value;
-              });
-              widget.onChangeFunc(_textFieldValue);
-            },
-            obscureText: obscureText_value,
-            decoration: InputDecoration(
-              // labelText: label_text,
-              // labelStyle: TextStyle(
-              //     color: Color(Primary),
-              //     fontSize: 12,
-              //     fontWeight: FontWeight.bold
-              // ),
-              filled: true,
-              fillColor: Color(SignUpTextField),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(22.0),
-                borderSide: BorderSide.none,
+        child:Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(label_text,  style: TextStyle(
+                color: Color(Primary),
+                fontSize: 12,
+                fontWeight: FontWeight.bold
+            )),
+            Container(
+              height: 40,
+              margin: EdgeInsets.fromLTRB(0, 7, 0, 7),
+              child: TextField(
+                style: TextStyle(color: Color(Primary),
+                    fontSize: 12),
+                onChanged: (value){
+                  setState(() {
+                    _textFieldValue = value;
+                  });
+                  widget.onChangeFunc(_textFieldValue);
+                },
+                obscureText: obscureText_value,
+                decoration: InputDecoration(
+                  // labelText: label_text,
+                  // labelStyle: TextStyle(
+                  //     color: Color(Primary),
+                  //     fontSize: 12,
+                  //     fontWeight: FontWeight.bold
+                  // ),
+                  filled: true,
+                  fillColor: Color(SignUpTextField),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(22.0),
+                    borderSide: BorderSide.none,
+                  ),
+                  focusedBorder:
+                  OutlineInputBorder(
+                    borderSide: BorderSide(color: Color(Primary)),
+                  ),
+                ),
               ),
-              focusedBorder:
-              OutlineInputBorder(
-                borderSide: BorderSide(color: Color(Primary)),
-              ),
-            ),
-          ),
-        )
-      ],)
+            )
+          ],)
+
     );
   }
 
 
 }
+

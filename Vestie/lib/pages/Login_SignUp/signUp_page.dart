@@ -83,11 +83,12 @@ class SignUpPageState extends State<SignUpPage> {
               Container(
                 margin: EdgeInsets.fromLTRB(13, 3, 13, 20),
                 child: Text("비밀번호는 영어, 숫자, 특수문자를 포함하여 8~13자 이내로 설정해주세요",
-                style: TextStyle(fontSize: 10,color: Color(SignUpExplainText)),),),
+                  style: TextStyle(fontSize: 10,color: Color(SignUpExplainText)),),),
 
               SignUpTextFiled(label_text: "비밀번호 확인", obscureText_value: true, onChangeFunc: idInputChange),
               Expanded(child: SizedBox(height: 10,)),
-              LongRoundedButton(btn_title: "다음으로", onPressedFunc: signUp, text_color: TextBright, bnt_color: Primary),
+              LongRoundedButton(btn_title: "다음으로", onPressedFunc: signUp, text_color: TextBright,),
+
               SizedBox(height: 20,)
             ],
           ),

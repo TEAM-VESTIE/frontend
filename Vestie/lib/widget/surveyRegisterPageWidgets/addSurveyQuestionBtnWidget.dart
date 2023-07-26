@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 
 //widgets
 class AddSurveyQuestionBtn extends StatelessWidget {
+  final VoidCallback onPressedFunc;
+
+  const AddSurveyQuestionBtn({
+    required this.onPressedFunc,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +19,7 @@ class AddSurveyQuestionBtn extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
         children: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.add_circle_outline,color: Colors.white,), color: Color(0xFF6875FF),),
+          IconButton(onPressed: onPressedFunc, icon: Icon(Icons.add_circle_outline,color: Colors.white,), color: Color(0xFF6875FF),),
           IconButton(onPressed: (){}, icon: Icon(Icons.photo_camera_back,color: Colors.white,),color: Color(0xFF6875FF),),
           IconButton(onPressed: (){}, icon: Icon(Icons.play_arrow_outlined,color: Colors.white,),color: Color(0xFF6875FF),),
         ],

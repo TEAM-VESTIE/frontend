@@ -79,8 +79,7 @@ class LoginPageState extends State<LoginPage>{
             SizedBox(height: 8.0),
             LoginTextFiled(label_text:"password",prefix_icon:pwIcon,obscureText_value:true,onChangeFunc:pwInputChange,),
             SizedBox(height: 16.0),
-            // LongRoundedButton(btn_title: "Login", onPressedFunc: login,text_color: TextBright,bnt_color: LoginBtn),
-            LongRoundedButton(btn_title: "Login", onPressedFunc: login,text_color: TextBright),
+            LongRoundedButton(btn_title: "Login", onPressedFunc: login,text_color: TextBright,bnt_color: LoginBtn),
             SizedBox(height: 14.0),
             TextButton(onPressed: move2SignUp,
               child: Text(

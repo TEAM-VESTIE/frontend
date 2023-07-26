@@ -39,11 +39,9 @@ class SurveyRegisterCompletetPageState extends State<SurveyRegisterCompletetPage
               ),
               Expanded(child: SizedBox(height: 10,)),
 
-              // LongRoundedButton(btn_title: "링크 공유하기", onPressedFunc: (){}, text_color: Primary, bnt_color: TextBright),
-              LongRoundedButton(btn_title: "링크 공유하기", onPressedFunc: (){}, text_color: Primary,),
+              LongRoundedButton(btn_title: "링크 공유하기", onPressedFunc: (){}, text_color: Primary, bnt_color: TextBright),
               SizedBox(height: 10,),
-              // LongRoundedButton(btn_title: "메인 페이지로 이동", onPressedFunc: move2FirstApp, text_color: TextBright, bnt_color: Primary,),
-              LongRoundedButton(btn_title: "메인 페이지로 이동", onPressedFunc: move2FirstApp, text_color: TextBright,),
+              LongRoundedButton(btn_title: "메인 페이지로 이동", onPressedFunc: move2FirstApp, text_color: TextBright, bnt_color: Primary,),
               SizedBox(height: 20,),
 
 

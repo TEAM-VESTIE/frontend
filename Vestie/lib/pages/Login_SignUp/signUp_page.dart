@@ -87,7 +87,7 @@ class SignUpPageState extends State<SignUpPage> {
 
               SignUpTextFiled(label_text: "비밀번호 확인", obscureText_value: true, onChangeFunc: idInputChange),
               Expanded(child: SizedBox(height: 10,)),
-              LongRoundedButton(btn_title: "다음으로", onPressedFunc: signUp, text_color: TextBright,),
+              LongRoundedButton(btn_title: "다음으로", onPressedFunc: signUp, text_color: TextBright,bnt_color: Primary),
 
               SizedBox(height: 20,)
             ],

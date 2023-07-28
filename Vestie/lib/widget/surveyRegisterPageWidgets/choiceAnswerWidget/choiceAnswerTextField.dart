@@ -4,6 +4,7 @@ import '../../../services/settingValues.dart';
 
 class ChoiceAnswerTextField extends StatefulWidget{
   final String choice_text='';
+
   @override
   State<StatefulWidget> createState() => ChoiceAnswerTextFieldState();
 }
@@ -15,7 +16,9 @@ class ChoiceAnswerTextFieldState extends State<ChoiceAnswerTextField>{
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.fromLTRB(30, 0, 0, 7),
       height: 30,
+      width: 250,
       decoration: BoxDecoration(
         border: Border.all(
           color: Color(Primary),

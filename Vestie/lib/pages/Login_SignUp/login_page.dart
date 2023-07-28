@@ -1,8 +1,11 @@
 
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:vestie/pages/Login_SignUp/signUp_page.dart';
 
 import 'package:vestie/services/settingValues.dart';
+import 'package:http/http.dart' as http;
 
 
 
@@ -35,6 +38,7 @@ class LoginPageState extends State<LoginPage>{
       pw = value;
     });
   }
+
   void login(){
     print('Id: $userId');
     print('Password: $pw');
@@ -45,6 +49,34 @@ class LoginPageState extends State<LoginPage>{
   void move2SignUp(){
     Navigator.pushReplacement(context,
         MaterialPageRoute(builder: (context) => SignUpPage()));
+  }
+
+  Future<void> loginGet() async{
+    var apiUrl = Uri.parse('https://example.com/api/login');
+
+    Map<String, dynamic> requestData ={
+      "username": userId,
+      "password": pw
+    };
+    try{
+      var response = await http.post(
+        apiUrl,
+        headers:{
+          'Content-Type': 'application/json', // JSON 형태로 데이터 전송시 지정
+          // 'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+        },
+        body:jsonEncode(requestData),
+      );
+
+      if(response.statusCode == 200){
+        Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => AppfirstPages()));
+      }else{
+        print("Post ER: ${response.statusCode}");
+      }
+    }catch(e){
+      print('$e');
+    }
   }
 
   @override

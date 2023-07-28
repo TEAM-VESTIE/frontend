@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:vestie/services/settingValues.dart';
+import 'package:http/http.dart' as http;
 
 
 //widgets
@@ -17,6 +20,7 @@ class SignUpPage extends StatefulWidget {
 class SignUpPageState extends State<SignUpPage> {
   String userId='';
   String pw ='';
+  String username ='';
 
   void idInputChange(String v){
     setState(() {
@@ -30,9 +34,44 @@ class SignUpPageState extends State<SignUpPage> {
     });
   }
 
+  void usernameInputChange(String v){
+    setState(() {
+      username = v;
+    });
+  }
+
   void signUp(){
     Navigator.pushReplacement(context,
         MaterialPageRoute(builder: (context) => LoginPage()));
+  }
+
+  Future<void> signUpPost() async{
+    var apiUrl = Uri.parse('https://example.com/api/members');
+
+    Map<String, dynamic> requestData ={
+      "username" : userId,
+      "password" : pw,
+      "name": username
+    };
+    try{
+      var response = await http.post(
+        apiUrl,
+        headers:{
+          'Content-Type': 'application/json', // JSON 형태로 데이터 전송시 지정
+          // 'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+        },
+        body:jsonEncode(requestData),
+      );
+
+      if(response.statusCode == 200){
+        Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => LoginPage()));
+      }else{
+        print("Post ER: ${response.statusCode}");
+      }
+    }catch(e){
+      print('$e');
+    }
   }
 
   @override
@@ -86,6 +125,10 @@ class SignUpPageState extends State<SignUpPage> {
                   style: TextStyle(fontSize: 10,color: Color(SignUpExplainText)),),),
 
               SignUpTextFiled(label_text: "비밀번호 확인", obscureText_value: true, onChangeFunc: idInputChange),
+              SizedBox(height: 20,),
+
+              SignUpTextFiled(label_text: "사용자 이름", obscureText_value: false, onChangeFunc: usernameInputChange),
+
               Expanded(child: SizedBox(height: 10,)),
               LongRoundedButton(btn_title: "다음으로", onPressedFunc: signUp, text_color: TextBright,bnt_color: Primary),
 

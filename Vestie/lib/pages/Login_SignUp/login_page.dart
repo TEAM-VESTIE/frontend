@@ -51,7 +51,7 @@ class LoginPageState extends State<LoginPage>{
         MaterialPageRoute(builder: (context) => SignUpPage()));
   }
 
-  Future<void> loginGet() async{
+  Future<void> loginPost() async{
     var apiUrl = Uri.parse('https://example.com/api/login');
 
     Map<String, dynamic> requestData ={
